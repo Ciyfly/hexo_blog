@@ -1,25 +1,31 @@
-name: Main workflow
+name: Node CI
 
-on:
-push:
-    branches:
-    - raw
+on: [push]
 
 jobs:
 build:
+runs-on: ubuntu-latest
+strategy:
+    matrix:
+    node-version: [10.x]
 
-    runs-on: ubuntu-18.04
-
-    steps:
+steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js 10.x
+    - name: Use Node.js ${{ matrix.node-version }}
     uses: actions/setup-node@v1
     with:
-        node-version: '10.x'
-    - name: prepare build env
+        node-version: ${{ matrix.node-version }}
+    - name: Configuration environment
     env:
-        GH_ACTION_DEPLOY_KEY: ${{secrets.id_rsa}}
-        NEXT_VERSION: v7.3.0
+        ID_RSA: ${{secrets.id_rsa}}
+    run: |
+        mkdir -p ~/.ssh/
+        echo "$ID_RSA" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        git config --global user.name '<your_user_name>'
+        git config --global user.email '<your_user_email>'
+    - name: Install dependencies
     run: |
         mkdir -p ~/.ssh/
         echo "$GH_ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
