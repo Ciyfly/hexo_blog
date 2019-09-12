@@ -18,7 +18,7 @@ build:
         node-version: '10.x'
     - name: prepare build env
     env:
-        GH_ACTION_DEPLOY_KEY: ${{secrets.GH_ACTION_DEPLOY_KEY}}
+        GH_ACTION_DEPLOY_KEY: ${{secrets.id_rsa}}
         NEXT_VERSION: v7.3.0
     run: |
         mkdir -p ~/.ssh/
