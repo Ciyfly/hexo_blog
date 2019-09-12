@@ -3,7 +3,6 @@ title: requests源码浅读
 date: 2019-09-11 18:46:45
 tags:
 ---
-## Requests
 
 版本是 request-2.22.0  
 __init__ 初始化 一些信息 将各个包都导入  
