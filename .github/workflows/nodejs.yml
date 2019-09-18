@@ -29,7 +29,6 @@ jobs:
         run: |
             npm i -g hexo-cli
             npm i
-            git clone https://github.com/iissnan/hexo-theme-next themes/next
       - name: Deploy hexo
         run: |
           hexo g -d
