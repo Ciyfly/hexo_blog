@@ -29,13 +29,7 @@ jobs:
         run: |
             npm i -g hexo-cli
             npm i
-            git clone --branch ${NEXT_VERSION} --depth=10  git@github.com:theme-next/hexo-theme-next.git themes/next
-            git checkout -b ${NEXT_VERSION}
-            git clone git@github.com:theme-next/theme-next-three --depth=1 themes/next/source/lib/three
-            git clone git@github.com:theme-next/theme-next-reading-progress --depth=1 themes/next/source/lib/reading_progress
-            git clone git@github.com:theme-next/theme-next-algolia-instant-search --depth=1 themes/next/source/lib/algolia-instant-search
-            # git clone git@github.com:theme-next/theme-next-fancybox3  --depth=1 themes/next/source/lib/fancybox
-            git clone git@github.com:theme-next/theme-next-pace --depth=1 themes/next/source/lib/pace
+            git clone https://github.com/iissnan/hexo-theme-next themes/next
       - name: Deploy hexo
         run: |
           hexo g -d
