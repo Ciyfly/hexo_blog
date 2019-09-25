@@ -2,6 +2,8 @@
 title: requests源码浅读
 date: 2019-09-11 18:46:45
 tags:
+  - 源码
+description: 版本是 request-2.22.0 静态读源码  
 ---
 
 版本是 request-2.22.0  

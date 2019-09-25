@@ -29,6 +29,7 @@ jobs:
         run: |
             npm i -g hexo-cli
             npm i
+            npm install https://github.com/CodeFalling/hexo-asset-image --save
       - name: Deploy hexo
         run: |
           hexo g -d
