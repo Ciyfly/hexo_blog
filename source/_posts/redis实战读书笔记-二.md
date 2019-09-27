@@ -3,7 +3,7 @@ title: redis实战读书笔记(二)
 date: 2019-09-27 15:57:26
 tags:
   - 读书笔记
-description: redis第二章的笔记 包含一个基于redis的调度实现代码 
+description: redis第二章的笔记 包含一个基于redis的定时任务调度实现代码 
 ---
 # Redis 第二章 
 
