@@ -1,5 +1,5 @@
 ---
-title: redis实战读书笔记-一
+title: redis实战读书笔记(一)
 date: 2019-09-25 18:15:03
 tags:
   - 读书笔记
