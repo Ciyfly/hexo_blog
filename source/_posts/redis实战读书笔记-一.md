@@ -3,7 +3,7 @@ title: redis实战读书笔记(一)
 date: 2019-09-25 18:15:03
 tags:
   - 读书笔记
-description: redis第一章的笔记 包含一个文章点赞的实例代码 
+description: redis第一章的笔记 包含一个文章点赞的实例代码 redis基本的使用等
 ---
 
 # Redis 第一章 
