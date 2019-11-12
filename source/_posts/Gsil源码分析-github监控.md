@@ -3,9 +3,9 @@ title: Gsil源码分析(github监控)
 date: 2019-11-12 15:51:45
 tags:
   - 源码
-description: 想写个github监控 于是读了一些源码来学习  
-这里先读下 Gsil 地址 https://github.com/FeeiCN/GSIL  
-是蘑菇街大佬 FeeiCN 多年前的项目 
+  - github监控
+description: 想写个github监控 于是读了一些源码来学习  这里先读下 Gsil 地址 https://github.com/FeeiCN/GSIL  是蘑菇街大佬FeeiCN 多年前的项目 
+
 ---
 
 # GSIL的分析
