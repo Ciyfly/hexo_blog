@@ -43,7 +43,7 @@ for charCount in (UNION_MIN_RESPONSE_CHARS << 2, UNION_MIN_RESPONSE_CHARS):
         randQueryUnescaped = unescaper.escape(randQueryProcessed)
 ```
 
-## 验证成功后获取数据
+### 验证成功后获取数据
 
 上次分析了注入点的验证确认 这里我们继续讲下 如何获取想要的数据  
 我们这里测试获取数据库名 使用参数 `--dbs`  
@@ -503,7 +503,7 @@ mysql udf 提权文件
 
 ![上传后的udf文件](sqlmap源码分析下/上传后的udf文件.jpg)  
 
-#### 需要的条件
+### 需要的条件
 
 需要有这个目录的 /usr/lib/mysql/plugin/写入权限  
 
@@ -605,7 +605,7 @@ def server(host=RESTAPI_DEFAULT_ADDRESS, port=RESTAPI_DEFAULT_PORT, adapter=REST
 
 ```
 
-#### run
+### run
 
 会控制不允许开启多个服务端  
 
@@ -619,7 +619,7 @@ def server(host=RESTAPI_DEFAULT_ADDRESS, port=RESTAPI_DEFAULT_PORT, adapter=REST
 
 他的这些数据存储到 内存中 日志存储到sqlite3中  
 
-#### api形式如何执行测试
+### api形式如何执行测试
 
 每个任务最终的调用当时 是开个进程去执行  `["python", "sqlmap.py", "--api", "-c", configFile]`  
 
@@ -627,7 +627,7 @@ def server(host=RESTAPI_DEFAULT_ADDRESS, port=RESTAPI_DEFAULT_PORT, adapter=REST
 
 使用这个接口来操作 
 
-#### 使用sqlmapapi -c 客户端模式进行测试
+### 使用sqlmapapi -c 客户端模式进行测试
 
 这里使用 pythonapi的客户端模块来创建任务 
 1. 创建一个任务 
@@ -648,7 +648,7 @@ def server(host=RESTAPI_DEFAULT_ADDRESS, port=RESTAPI_DEFAULT_PORT, adapter=REST
 
 
 
-#### sqlmap api的利用
+### sqlmap api的利用
 这里本来打算做个扫描平台那种 sqlmap只作为一种检测引擎  
 这里可以 通过对url去重 过滤等操作后 下发到节点进行操作  
 
