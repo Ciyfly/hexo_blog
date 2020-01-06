@@ -35,4 +35,4 @@ jobs:
           hexo g -d
       - name: send message
         run: |
-           curl server_url
+           curl ${{secrets.server_url}}
